@@ -1,0 +1,12 @@
+namespace: test
+
+helm:
+  chart: sleeper-chart
+
+diff:
+  comparePatches:
+    - apiVersion: v1
+      kind: Service
+      name: testservice
+      operations:
+      - {"op":"remove", "path":"/spec/ports"}
