@@ -4,6 +4,6 @@ metadata:
   name: testing2
 spec:
   repo: https://github.com/manno/fleet-experiments
-  branch: main
+  branch: diff-experiment2
   paths:
   - examples
