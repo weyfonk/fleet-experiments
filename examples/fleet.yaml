@@ -4,6 +4,6 @@ diff:
   comparePatches:
   - apiVersion: v1
     kind: ConfigMap
-    name: app-config
+    name: app-config2
     operations:
     - {"op":"remove", "path":"/data"}
