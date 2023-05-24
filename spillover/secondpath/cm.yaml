@@ -1,0 +1,175 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: secondexample
+  namespace: example
+data:
+   002-general.conf: |
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
+     # The general configuration is used for all deployments
+     #
+     # Run collector with the flag -conf and specify location of the configuration files.
+     #
+     # You can override all the values using environment variables with the format like
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     # As an example you can set dataPath in [general] section as
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     # This parameter can be configured using -env-override, set it to empty string to disable this feature
+
+
+     # Limitations:
+     # * The urls cannot have different path.
+
+     # Specify how URL should be picked up (in case if multiple is used)
+     # urlSelection = random|round-robin|random-with-round-robin
+     # where:
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)$
