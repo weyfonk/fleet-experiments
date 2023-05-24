@@ -26,6 +26,19 @@ data:
      # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
      # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
      #                             failure (connection or HTTP status code >= 500)$
+     #   COLLECTOR__<ANYNAME>=<section>__<key>=<value>
+     #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
+     #   includeAnnotations.{key} = {regexp}
+     #   includeAnnotations.1 = ^prometheus\.io.*
+     #   includeAnnotations.2 = ^example\.com.*
+     watch.configurations =  collectord.io/v1/configuration
+     # * The urls cannot have different path.
+     # * random - choose random url on first selection and after each failure (connection or HTTP status code >= 500)
+     # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
+     # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
+     #                             failure (connection or HTTP status code >= 500)
+     # * The urls cannot have different path.
+
      # The general configuration is used for all deployments
      #
      # Run collector with the flag -conf and specify location of the configuration files.
