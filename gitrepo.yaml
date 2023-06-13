@@ -1,9 +1,16 @@
 kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
-  name: testing2
+  name: experiment
 spec:
   repo: https://github.com/manno/fleet-experiments
-  branch: diff-experiment2
+  branch: main
   paths:
-  - examples
+    - rollout
+  targets:
+    - clusterSelector:
+      matchExpressions:
+        - key: deploy
+          operator: NotIn
+          values:
+            - skip

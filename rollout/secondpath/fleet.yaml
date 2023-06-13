@@ -1,0 +1,15 @@
+rolloutStrategy:
+  # A number or percentage of clusters that can be unavailable during an update
+  # of a bundle. This follows the same basic approach as a deployment rollout
+  # strategy. Once the number of clusters meets unavailable state update will be
+  # paused. Default value is 100% which doesn't take effect on update.
+  # default: 100%
+  maxUnavailable: 33%
+  # A number or percentage of cluster partitions that can be unavailable during
+  # an update of a bundle.
+  # default: 0
+  maxUnavailablePartitions: 10%
+  # A number of percentage of how to automatically partition clusters if not
+  # specific partitioning strategy is configured.
+  # default: 25%
+  autoPartitionSize: 25%

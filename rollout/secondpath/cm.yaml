@@ -1,0 +1,8 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: secondexample
+  namespace: example
+data:
+  002-general.conf: |
+    more data
