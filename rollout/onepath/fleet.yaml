@@ -4,7 +4,7 @@ rolloutStrategy:
   # strategy. Once the number of clusters meets unavailable state update will be
   # paused. Default value is 100% which doesn't take effect on update.
   # default: 100%
-  maxUnavailable: 15%
+  maxUnavailable: 100%
   # A number or percentage of cluster partitions that can be unavailable during
   # an update of a bundle.
   # default: 0
