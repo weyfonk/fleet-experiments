@@ -8,7 +8,7 @@ rolloutStrategy:
   # A number or percentage of cluster partitions that can be unavailable during
   # an update of a bundle.
   # default: 0
-  maxUnavailablePartitions: 0
+  maxUnavailablePartitions: 0%
   # A number of percentage of how to automatically partition clusters if not
   # specific partitioning strategy is configured.
   # default: 25%
