@@ -9,8 +9,8 @@ spec:
     - rollout
   targets:
     - clusterSelector:
-      matchExpressions:
-        - key: deploy
-          operator: NotIn
-          values:
-            - skip
+        matchExpressions:
+          - key: deploy
+            operator: NotIn
+            values:
+              - skip

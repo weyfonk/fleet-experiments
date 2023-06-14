@@ -2,7 +2,7 @@ kind: ConfigMap
 apiVersion: v1
 metadata:
   name: secondexample
-  namespace: example
+  namespace: example2
 data:
   002-general.conf: |
     more data
