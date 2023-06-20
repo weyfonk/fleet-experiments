@@ -6,6 +6,6 @@ spec:
   repo: https://github.com/manno/fleet-experiments
   branch: main
   paths:
-    - rollout
+    - dependson/root
   targets:
     - clusterSelector: {}

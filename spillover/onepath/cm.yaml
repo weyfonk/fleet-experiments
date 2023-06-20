@@ -15,7 +15,6 @@ data:
      #   COLLECTOR__DATAPATH=general__dataPath=C:\\some\\path\\data.db
      # This parameter can be configured using -env-override, set it to empty string to disable this feature
 
-
      # Limitations:
      # * The urls cannot have different path.
 
@@ -186,3 +185,4 @@ data:
      # * round-robin - choose url starting from first one and bump on each failure (connection or HTTP status code >= 500)
      # * random-with-round-robin - choose random url on first selection and after that in round-robin on each
      #                             failure (connection or HTTP status code >= 500)$
+
