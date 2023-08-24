@@ -7,7 +7,7 @@ metadata:
 spec:
   ports:
   - port: 6342
-    targetPort: 808
+    targetPort: 15994
     name: required-name2
   selector:
     env: test
