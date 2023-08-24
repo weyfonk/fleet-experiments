@@ -6,7 +6,7 @@ metadata:
     env: test
 spec:
   ports:
-  - port: 6340
+  - port: 6341
     targetPort: 6340
     name: required-name2
   selector:
