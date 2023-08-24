@@ -1,0 +1,19 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: test-spillover1
+spec:
+  repo: https://github.com/manno/fleet-experiments
+  branch: main
+  paths:
+  - spillover/onepath
+---
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: test-spillover2
+spec:
+  repo: https://github.com/manno/fleet-experiments
+  branch: main
+  paths:
+  - spillover/secondpath
