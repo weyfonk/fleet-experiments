@@ -2,11 +2,12 @@ kind: GitRepo
 apiVersion: fleet.cattle.io/v1alpha1
 metadata:
   name: gitrepo1
+  namespace: fleet-local
 spec:
   repo: https://github.com/manno/fleet-experiments
   branch: main
   paths:
-    - multiple-paths/config
+  - multiple-paths/config
   pollingInterval: "40s"
   targets:
-    - clusterSelector: {}
+  - clusterSelector: {}

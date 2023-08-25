@@ -6,7 +6,7 @@ spec:
   repo: https://github.com/manno/fleet-experiments
   branch: main
   paths:
-    - multi-gitrepo
+    - multi-gitrepo/chart
   targets:
     - clusterName: local
     # - name: default
