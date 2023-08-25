@@ -1,6 +1,0 @@
-ignore:
-  conditions:
-   - type: Reconciling
-     status: "False"
-   - type: Stalled
-     status: "False"
