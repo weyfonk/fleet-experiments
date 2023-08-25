@@ -1,21 +1,21 @@
 helm:
   chart: "https://github.com/rancher/charts/raw/dev-v2.8/assets/longhorn-crd/longhorn-crd-102.3.0%2Bup1.5.1.tgz"
-diff:
-  comparePatches:
-  - apiVersion: apiextensions.k8s.io/v1
-    kind: CustomResourceDefinition
-    name: engineimages.longhorn.io
-    operations:
-    - {"op": "remove", "path":"/status/acceptedNames"}
-    - {"op": "remove", "path":"/status/conditions"}
-    - {"op": "remove", "path":"/status/storedVersions"}
-  - apiVersion: apiextensions.k8s.io/v1
-    kind: CustomResourceDefinition
-    name: nodes.longhorn.io
-    operations:
-    - {"op": "remove", "path":"/status"}
-  - apiVersion: apiextensions.k8s.io/v1
-    kind: CustomResourceDefinition
-    name: volumes.longhorn.io
-    operations:
-    - {"op": "remove", "path":"/status"}
+# diff:
+#   comparePatches:
+#   - apiVersion: apiextensions.k8s.io/v1
+#     kind: CustomResourceDefinition
+#     name: engineimages.longhorn.io
+#     operations:
+#     - {"op": "remove", "path":"/status/acceptedNames"}
+#     - {"op": "remove", "path":"/status/conditions"}
+#     - {"op": "remove", "path":"/status/storedVersions"}
+#   - apiVersion: apiextensions.k8s.io/v1
+#     kind: CustomResourceDefinition
+#     name: nodes.longhorn.io
+#     operations:
+#     - {"op": "remove", "path":"/status"}
+#   - apiVersion: apiextensions.k8s.io/v1
+#     kind: CustomResourceDefinition
+#     name: volumes.longhorn.io
+#     operations:
+#     - {"op": "remove", "path":"/status"}
