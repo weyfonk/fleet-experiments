@@ -1,1 +1,4 @@
 namespace: test-fleet-mp-config
+helm:
+  values:
+    rand: "{{ randAlphaNum }}

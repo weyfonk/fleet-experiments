@@ -1,0 +1,14 @@
+kind: GitRepo
+apiVersion: fleet.cattle.io/v1alpha1
+metadata:
+  name: multi-gitrepo
+spec:
+  repo: https://github.com/manno/fleet-experiments
+  branch: main
+  paths:
+    - multi-gitrepo
+  targets:
+    - clusterName: local
+    # - name: default
+    #   clusterGroup: default
+
