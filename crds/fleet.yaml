@@ -1,0 +1,2 @@
+helm:
+  chart: "https://github.com/rancher/charts/raw/dev-v2.8/assets/longhorn-crd/longhorn-crd-102.3.0%2Bup1.5.1.tgz"
