@@ -1,0 +1,4 @@
+database:
+  external:
+    username: DEFAULT-USERNAME
+    password: DEFAULT-PASSWORD
