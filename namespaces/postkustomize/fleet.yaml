@@ -1,0 +1,3 @@
+defaultNamespace: trident-csi
+kustomize:
+  dir: overlays
