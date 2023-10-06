@@ -1,5 +1,3 @@
 defaultNamespace: trident-csi
-helm:
-  releaseName: testchartnamespace
 kustomize:
   dir: overlays
