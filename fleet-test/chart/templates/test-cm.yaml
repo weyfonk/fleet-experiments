@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap
+data:
+  username: "{{ .Values.database.external.username }}"
+  password: "{{ .Values.database.external.password }}"

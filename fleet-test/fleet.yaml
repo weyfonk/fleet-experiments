@@ -1,0 +1,19 @@
+defaultNamespace: test
+
+helm:
+  chart: ./chart
+  releaseName: test
+
+  valuesFrom:
+  - secretKeyRef:
+      name: password-secret
+      namespace: default
+      key: values.yaml
+
+  values:
+    database:
+      external:
+        username: flathead
+
+kustomize:
+  dir: ./kustomize
