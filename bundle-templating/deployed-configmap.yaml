@@ -1,0 +1,24 @@
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    annotations:
+      objectset.rio.cattle.io/id: -test-repo
+    labels:
+      objectset.rio.cattle.io/hash: 22d9e857a06cb62aaffae8a79199b024b781dde8
+    name: test-template-values
+  data:
+    annotations: '{"app":"fleet","more":"data"}'
+    clusterLabels: |
+      # configmaps can only contain strings, toJson for debug:
+      {"management.cattle.io/cluster-display-name":"local","management.cattle.io/cluster-name":"local","name":"local","provider.cattle.io":"k3s"}
+    clusterValues: '{}'
+    global: "null"
+    home: ${HOME}
+    image: rancher/mirrored-library-busybox:1.16.0
+    imagePullPolicy: IfNotPresent
+    name: name-local
+    namespace: fleet-local
+    path: |
+      prefix
+      a${PATH}z
+      suffix
