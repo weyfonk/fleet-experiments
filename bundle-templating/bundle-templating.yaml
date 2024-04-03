@@ -1,0 +1,96 @@
+apiVersion: fleet.cattle.io/v1alpha1
+kind: Bundle
+metadata:
+  labels:
+    fleet.cattle.io/commit: d0f90d40569cc22d173debe947e2aeece56e720a
+  name: test-repo
+  namespace: fleet-local
+spec:
+  helm:
+    values:
+      annotations:
+        app: fleet
+        more: data
+      clusterLabels: ${ .ClusterLabels | toJson }
+      clusterValues: ${ .ClusterValues | toJson }
+      home: ${`${HOME}`}
+      hostnames: ${ list "one" "two" "three" | uniq | toJson }
+      image:
+        pullPolicy: ${ if hasKey .ClusterValues "policy" }${.ClusterValues.policy}${else}"IfNotPresent"${end}
+        repository: ${if index .ClusterLabels "repository"}${.ClusterLabels.repository}${else}rancher/mirrored-library-busybox${end}
+      name: name-${ .ClusterName }
+      namespace: ${ .ClusterNamespace }
+      path: |
+        prefix
+        a${"${PATH}"}z
+        suffix
+      policy: ${ index .ClusterValues "policy" }
+      replicaCount: 1
+  ignore: {}
+  resources:
+  - content: |
+      apiVersion: v2
+      name: test-chart
+      description: A test chart
+      type: application
+      version: 0.1.0
+      appVersion: "1.16.0"
+    name: Chart.yaml
+  - content: |
+      helm:
+        # It is possible to specify the keys and values as gotpl strings for advanced templating needs.
+        # Most of the functions from sprig templating library is available.
+        # The template context has following keys.
+        # `.ClusterValues` are retrieved from target cluster's `spec.templateValues`
+        # `.ClusterLabels` and `.ClusterAnnotations` are the labels and annoations in the cluster resource.
+        # `.ClusterName` as the fleet's cluster resource name.
+        # `.ClusterNamespace` as the namespace which the cluster resource exists.
+        values:
+          name: name-${ .ClusterName }
+          namespace: ${ .ClusterNamespace }
+          clusterLabels: ${ .ClusterLabels | toJson }
+          clusterValues: ${ .ClusterValues | toJson }
+          policy: ${ index .ClusterValues "policy" }
+          image:
+            # clusterValues is a Dictionary
+            pullPolicy: ${ if hasKey .ClusterValues "policy" }${.ClusterValues.policy}${else}"IfNotPresent"${end}
+            # clusterLabels is a Dictionary
+            repository: ${if index .ClusterLabels "repository"}${.ClusterLabels.repository}${else}rancher/mirrored-library-busybox${end}
+          # generate a list, json is a subset of yaml
+          hostnames: ${ list "one" "two" "three" | uniq | toJson }
+          annotations:
+            app: fleet
+            more: data
+          replicaCount: 1
+          home: ${`${HOME}`}
+          path: |
+              prefix
+              a${"${PATH}"}z
+              suffix
+    name: fleet.yaml
+  - content: |
+      apiVersion: v1
+      kind: ConfigMap
+      metadata:
+        name: test-template-values
+      data:
+        name: {{ .Values.name }}
+        namespace: {{ .Values.namespace }}
+        clusterLabels: |
+          # configmaps can only contain strings, toJson for debug:
+          {{ .Values.clusterLabels | toJson }}
+        clusterValues: |-
+          {{ .Values.clusterValues | toJson }}
+        global: |-
+          {{ .Values.global | toJson }}
+        annotations: |-
+          {{ .Values.annotations | toJson }}
+        image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.image.pullPolicy }}
+        home: {{ .Values.home }}
+        path: {{ .Values.path | quote }}
+    name: templates/configmap.yaml
+  targets:
+  - clusterGroup: default
+    ignore: {}
+    name: default

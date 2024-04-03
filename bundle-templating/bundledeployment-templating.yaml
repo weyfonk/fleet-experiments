@@ -1,0 +1,87 @@
+---
+apiVersion: fleet.cattle.io/v1alpha1
+content: H4sIAAAAAAAA/4RWTW/jNhC991cMuAb2EmuTHnrQLUgL7LbNNofFXsoCHksjiV1qqCUpJ66t/16QlGxFdtqLDc+8N/PI+aAPwpIzvS3IifzPg2BsSeTioUHrsz22WtyIwrAn9iIX2KmvZJ0ynMPuR8kBnYMn59dFYEguyRVWdT5C7qMLRpffd5QDdp1WBQaA5N0U7Da7y24lY9ed4ktxl939lN1KIVkMNydplSa6Iq0h3eaSAd7BJw/KQWecU1tN4A24jgpV7cE3BN9o7wC5hB3qnhygg9r4ToPzVnHtoDIWsNwhF1SCp7bT6BXXwESly1KKR+M8mCoGrHouwnEcVNa04Dqr6jlPq61Fuw+acIdK41bTGOZLQxOSIJ7lxUODQYPW5jmwg9wRvckedO882a9R+QbQEljyVtGOypTdo63JQ5GA7x1swtmzKcnIXMT7HbekQzwuz8Z7ZuNjncZM4aw6IiMQmU1yg+LoHJPC1FFL2Z+xpU2473hroYzv3QUJQpmvMV2HxZnOkwWeG1U0V/MDvSjn0+2lYscGAUhtGz7XqwPMk8BwRsTwOSwQKekIK+b39wqaTHAEb351hheEVIZXhGS6IHRGq2IfkYpLelnipUgIKSaGarGm8aDhEl+ljE0IP6vYsGj3E6zrtX6apapCF/5G+/9Ktzq8dmbJNawOpB0NUnyqPhv/ZMkReylWB+JyuNA1XtQbuix1xilvbNSlqsUljGQpzjgpZsKSPzt7J3EWuWjIfmiVtcZSuR6HdL3t3X5rXuZi30FNTDaMKIJWzt/A36FCUbLrt47iKggbKREa43xsoHiXgQFSGCYpQAr/bNJ3YylYjtCz+n5RdzxP36mW2HV5mpvJ0hpLOZToMVksxeX6YHr2OdxNctrYxpvV4eMfj78Mm6m10Dc5HKdYAJ2lSr2cf+PqEMr2dP/l4yDF8M/Z4/oqIud7eVox7kNhuFJ1i93/PCB3kr8pLnN4iIRH7CS35DGcJx569rxM0ddpkCUvQIcDZGMbcpzjYfKNY7wAjGMcUYspPk5lP53DQYEMhvU+LmlUPD0WN1PZwqNR0ravx2rN0hVvbIR57mkhHNdv0S/2Q6TX2mxRX+Ul15Iw76trrJl/SU2LBaSYwaNtNl8wDPmF22MNRyipwl57yNJ/i/vTUx/Ci1OCp9kmuoh0XlOjptTbM1wwjL7U3zNfMMARvvfGJ4wY/hp++DcAAP//W4VAdwIJAAA=
+kind: Content
+metadata:
+  creationTimestamp: null
+  name: s-76006e114f7cba6b8fb1bc220e56beea5b2cf5a6eb9e53055bbcc10b03ed3
+sha256sum: 76006e114f7cba6b8fb1bc220e56beea5b2cf5a6eb9e53055bbcc10b03ed3f26
+
+---
+apiVersion: fleet.cattle.io/v1alpha1
+kind: BundleDeployment
+metadata:
+  creationTimestamp: null
+  labels:
+    fleet.cattle.io/bundle-name: test-repo
+    fleet.cattle.io/bundle-namespace: fleet-local
+    fleet.cattle.io/cluster: local
+    fleet.cattle.io/cluster-namespace: fleet-local
+    fleet.cattle.io/commit: d0f90d40569cc22d173debe947e2aeece56e720a
+    fleet.cattle.io/managed: "true"
+  name: test-repo
+  namespace: cluster-fleet-local-local-1a3d67d0a899
+spec:
+  deploymentID: s-76006e114f7cba6b8fb1bc220e56beea5b2cf5a6eb9e53055bbcc10b03ed3:b7732f0e8525ab444a1f839395119c2d62b4add0d029df931df1f9c6a3b340eb
+  options:
+    helm:
+      values:
+        annotations:
+          app: fleet
+          more: data
+        clusterLabels:
+          management.cattle.io/cluster-display-name: local
+          management.cattle.io/cluster-name: local
+          name: local
+          provider.cattle.io: k3s
+        clusterValues: {}
+        home: ${HOME}
+        hostnames:
+        - one
+        - two
+        - three
+        image:
+          pullPolicy: IfNotPresent
+          repository: rancher/mirrored-library-busybox
+        name: name-local
+        namespace: fleet-local
+        path: |
+          prefix
+          a${PATH}z
+          suffix
+        policy: <no value>
+        replicaCount: 1
+    ignore: {}
+  stagedDeploymentID: s-76006e114f7cba6b8fb1bc220e56beea5b2cf5a6eb9e53055bbcc10b03ed3:b7732f0e8525ab444a1f839395119c2d62b4add0d029df931df1f9c6a3b340eb
+  stagedOptions:
+    helm:
+      values:
+        annotations:
+          app: fleet
+          more: data
+        clusterLabels:
+          management.cattle.io/cluster-display-name: local
+          management.cattle.io/cluster-name: local
+          name: local
+          provider.cattle.io: k3s
+        clusterValues: {}
+        home: ${HOME}
+        hostnames:
+        - one
+        - two
+        - three
+        image:
+          pullPolicy: IfNotPresent
+          repository: rancher/mirrored-library-busybox
+        name: name-local
+        namespace: fleet-local
+        path: |
+          prefix
+          a${PATH}z
+          suffix
+        policy: <no value>
+        replicaCount: 1
+    ignore: {}
+status:
+  display: {}
+
