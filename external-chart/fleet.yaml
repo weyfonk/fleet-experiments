@@ -1,3 +1,4 @@
 helm:
-  chart: oci://registry-1.docker.io/bitnamicharts/nginx
-  version: 18.1.11
+  repo: https://grafana.github.io/helm-charts
+  chart: grafana
+  version: 8.5.1
