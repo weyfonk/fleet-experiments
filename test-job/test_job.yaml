@@ -15,4 +15,4 @@ spec:
         command:
         - sleep
         args:
-        - "100"
+        - "30"
