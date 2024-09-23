@@ -1,0 +1,7 @@
+diff:
+  comparePatches:
+  - apiVersion: batch/v1
+    kind: Job
+    name: test-job
+    operations:
+    - {"op":"remove"}
