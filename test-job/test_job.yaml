@@ -3,7 +3,7 @@ kind: Job
 metadata:
   name: test-job
   labels:
-    last-update: foo
+    last-update: 1727098310
 spec:
   ttlSecondsAfterFinished: 10
   template:
