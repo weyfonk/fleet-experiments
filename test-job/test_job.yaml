@@ -5,7 +5,7 @@ metadata:
   labels:
     last-update: 1727098717
 spec:
-  ttlSecondsAfterFinished: 10
+  ttlSecondsAfterFinished: 5
   template:
     spec:
       restartPolicy: Never
