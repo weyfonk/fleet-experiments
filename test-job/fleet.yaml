@@ -3,6 +3,7 @@ diff:
   - apiVersion: batch/v1
     kind: Job
     name: test-job
+    namespace: default
     operations:
     - op: remove
       path: /
