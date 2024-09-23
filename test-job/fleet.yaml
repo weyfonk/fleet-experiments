@@ -4,4 +4,4 @@ diff:
     kind: Job
     name: test-job
     operations:
-    - {"op":"remove"}
+    - {"op":"remove", "path": "/"}
