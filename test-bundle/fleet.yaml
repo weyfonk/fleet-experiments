@@ -2,3 +2,5 @@ defaultNamespace: test-bundle
 helm:
   chart: ./chart
   releaseName: test-bundle
+rolloutStrategy:
+  maxUnavailablePartitions: 100%
