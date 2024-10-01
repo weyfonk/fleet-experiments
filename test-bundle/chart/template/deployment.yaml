@@ -17,4 +17,4 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: ["sleep", "1"]
+                command: ["sleep", "100"]
