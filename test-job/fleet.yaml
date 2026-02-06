@@ -2,6 +2,7 @@ diff:
   comparePatches:
   - apiVersion: batch/v1
     kind: Job
+    name: .*job
     namespace: default
     operations:
     - op: ignore
