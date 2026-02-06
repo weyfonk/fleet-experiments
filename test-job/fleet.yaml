@@ -5,4 +5,4 @@ diff:
     name: test-job
     namespace: default
     operations:
-    - op: remove
+    - op: ignore
